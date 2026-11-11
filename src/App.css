@@ -1,0 +1,197 @@
+/* Warna Dasar & Latar Belakang */
+body {
+  background-color: #0d0d12;
+  color: #f3f4f6;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigasi Bergaya Kaca (Glassmorphism) */
+nav {
+  background: rgba(20, 20, 25, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 20px 40px;
+  display: flex;
+  align-items: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-direction: column;
+}
+.container-nav{
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+/* Desain Kartu Film */
+.movie-card {
+  background-color: #1a1a24;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 220px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.card-image-wrapper {
+  position: relative;
+  height: 320px;
+  width: 100%;
+}
+
+.movie-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.genre-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.movie-title {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tombol Aksi */
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-icon {
+  background: #2a2a35;
+  color: #9ca3af;
+  border: none;
+  width: 40px;
+  font-size: 1.2rem;
+}
+
+.btn-icon:hover { background: #3f3f4e; }
+.active-fav { color: #ef4444; }
+
+.btn-action {
+  flex: 1;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  padding: 8px;
+}
+.tombol-kembali{
+  padding: 8px 16px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.tombol-kembali:hover{
+  padding: 8px 16px;
+  background-color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all ease 0.4s;
+  color: #ef4444;
+  font-size: 17px;
+}
+.tombol-genre{
+  padding: 5px 10px;
+  background-color: #333;
+  color: #007bff; 
+  text-decoration: none; 
+  border-radius: 15px;
+  border: 1px solid #007bff;
+  margin: 10px;
+}
+.tombol-genre:hover{
+  padding: 5px 10px;
+  background-color: #333;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: all ease 0.3s;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+}
+.link-nav{
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(108, 7, 203);
+}
+.link-nav:hover{
+  font-size: 26px;
+  transition: all ease 0.5s;
+  color: rgb(162, 75, 244);
+}
+
+.btn-action:hover { background: #2563eb; }
+.active-watch { background: #10b981; }
+
+.button-add{
+  padding: 12px;
+  background: #3b82f6;
+  color: white;
+  border: none; 
+  border-radius: 5px; 
+  font-weight: bold; 
+  cursor: pointer; 
+  margin: 10px;
+  
+}
+.button-add:hover{
+  font-size: 15px;
+  transition: all ease 0.4s;
+  background-color: #69a2ff;
+}
+.button-delete{
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px; 
+  border-radius: 5px; 
+  cursor: pointer;
+  font-weight: bold; 
+}
+.button-delete:hover{
+  transition: all ease 0.4s;
+  background-color:#67000a;
+}
+
+/* Menyesuaikan Scrollbar Horizontal */
+::-webkit-scrollbar { height: 8px; }
+::-webkit-scrollbar-track { background: #0d0d12; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
