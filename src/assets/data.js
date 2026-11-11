@@ -3,61 +3,61 @@ export const moviesData = [
     id: 1, 
     title: "The Amazing Spider-Man", 
     genre: ["Mystery", "Action", "Romance"],
-    image: "/posters/tasm.jpg" // Sesuai dengan nama file gambarmu
+    image: import.meta.env.BASE_URL +"/posters/tasm.jpg" // Sesuai dengan nama file gambarmu
   },
   { 
     id: 2, 
     title: "The Amazing Spider-Man 2", 
     genre: ["Mystery", "Action", "Romance"],
-    image: "/posters/tasm2.jpg"
+    image: import.meta.env.BASE_URL +"/posters/tasm2.jpg"
   },
   { 
     id: 3, 
     title: "Spider-Man: Brand New Day", 
     genre: ["Action", "Adventure"],
-    image: "/posters/spidermanbnd.jpg"
+    image: import.meta.env.BASE_URL +"/posters/spidermanbnd.jpg"
   },
   { 
     id: 4, 
     title: "Spider-Man: Across The Spider Verse", 
     genre: ["Sci-Fi", "Action", "Adventure"],
-    image: "/posters/spidermanatsv.jpg"
+    image: import.meta.env.BASE_URL +"/posters/spidermanatsv.jpg"
   },
   {
     id:5,
     title: "Gotoubun no Hanayome", 
     genre: ["Romance", "Comedy"],
-    image: "/posters/tqq.webp"
+    image: import.meta.env.BASE_URL +"/posters/tqq.webp"
   },
   {
     id:6,
     title: "Boku no Hero Academia", 
     genre: ["Action", "Super Power"],
-    image: "/posters/bnha1.webp"
+    image: import.meta.env.BASE_URL +"/posters/bnha1.webp"
   },
   {
     id:7,
     title: "Kimi No Na Wa", 
     genre: ["Drama", "Fantasy", "Supranatural", "Romance"],
-    image: "/posters/kimi-no-na-wa.webp"
+    image: import.meta.env.BASE_URL +"/posters/kimi-no-na-wa.webp"
   },
   {
     id:8,
     title: "Kungfu Panda 4", 
     genre: ["Action", "Animation", "Animal"],
-    image: "/posters/kungfu-panda-4.jpg"
+    image: import.meta.env.BASE_URL +"/posters/kungfu-panda-4.jpg"
   },
   {
     id:9,
     title: "Napoleon", 
     genre: ["Action", "History"],
-    image: "/posters/napoleon.jpg"
+    image: import.meta.env.BASE_URL +"/posters/napoleon.jpg"
   },
   {
     id:10,
     title: "The Social Network", 
     genre: ["Drama", "Biography"],
-    image: "/posters/the-social-network.jpg"
+    image: import.meta.env.BASE_URL +"/posters/the-social-network.jpg"
   },
   { 
     id: 11, 
@@ -69,7 +69,7 @@ export const moviesData = [
     id: 12, 
     title: "Dragon Ball Super: Broly", 
     genre: ["Animation", "Action", "Fantasy"],
-    image: "posters/db-super-broly.jpg"
+    image: import.meta.env.BASE_URL +"posters/db-super-broly.jpg"
   },
   { 
     id: 13, 
@@ -99,7 +99,7 @@ export const moviesData = [
     id: 17, 
     title: "Spider-Man: No Way Home", 
     genre: ["Action", "Adventure", "Fantasy"],
-    image: "/posters/no-way-home.jpg"
+    image: import.meta.env.BASE_URL +"/posters/no-way-home.jpg"
   },
   { 
     id: 18, 
@@ -117,7 +117,7 @@ export const moviesData = [
     id: 20, 
     title: "Spider-Man: Homecoming", 
     genre: ["Action", "Adventure", "Sci-Fi"],
-    image: "posters/homecoming.jpg"
+    image: import.meta.env.BASE_URL +"posters/homecoming.jpg"
   },
   { 
     id: 21, 
@@ -129,7 +129,7 @@ export const moviesData = [
     id: 22, 
     title: "Spider-Man 2", 
     genre: ["Action", "Adventure", "Sci-Fi"],
-    image: "posters/spiderman2.jpg"
+    image: import.meta.env.BASE_URL +"posters/spiderman2.jpg"
   },
   { 
     id: 23, 
