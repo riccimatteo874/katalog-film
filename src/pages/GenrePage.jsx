@@ -11,7 +11,7 @@ export default function GenrePage({ movies, favorites, setFavorites, watchlist, 
     <div style={{ padding: '0 20px', color: 'white' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
         <Link to="/" style={{ color: '#aaa', textDecoration: 'none', fontSize: '1.2rem' }}>←</Link>
-        <h2 style={{ margin: 0 }}>Jelajah Genre: <span style={{ color: '#007bff' }}>{genreName}</span></h2>
+        <h2 style={{ margin: 0, marginTop:'10px'}}>Jelajah Genre: <span style={{ color: '#007bff' }}>{genreName}</span></h2>
       </div>
 
       {/* Menggunakan flexWrap agar kartu turun ke baris baru jika layarnya penuh (Sistem Grid) */}
