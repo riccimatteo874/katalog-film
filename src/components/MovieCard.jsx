@@ -1,4 +1,5 @@
-import "../App.css"; // Pastikan CSS terhubung
+import { useNavigate } from "react-router-dom";
+import "../App.css";
 
 export default function MovieCard({
   movie,
@@ -7,27 +8,35 @@ export default function MovieCard({
   watchlist = [],
   setWatchlist,
 }) {
+  const navigate = useNavigate();
   const isFavorite = favorites.includes(movie.id);
   const isWatchlisted = watchlist.includes(movie.id);
 
-  const toggleFavorite = () => {
+  const toggleFavorite = (e) => {
+    e.stopPropagation();
     isFavorite
       ? setFavorites(favorites.filter((id) => id !== movie.id))
       : setFavorites([...favorites, movie.id]);
   };
 
-  const toggleWatchlist = () => {
+  const toggleWatchlist = (e) => {
+    e.stopPropagation();
     isWatchlisted
       ? setWatchlist(watchlist.filter((id) => id !== movie.id))
       : setWatchlist([...watchlist, movie.id]);
   };
 
+  const handleCardClick = () => {
+    navigate(`/movie/${movie.id}`);
+  };
+
   return (
-    <div className="movie-card">
+    <div className="movie-card" onClick={handleCardClick}>
       <div className="card-image-wrapper">
-        {/* Render gambar menggunakan properti image dari data */}
         <img src={movie.image} alt={movie.title} className="movie-image" />
-        <div className="genre-tag">{movie.genre.join(", ")}</div>
+        <div className="genre-tag">
+          {Array.isArray(movie.genre) ? movie.genre.join(", ") : movie.genre}
+        </div>
       </div>
 
       <div className="card-content">
@@ -39,7 +48,7 @@ export default function MovieCard({
           <button
             onClick={toggleFavorite}
             className={`btn-icon ${isFavorite ? "active-fav" : ""}`}
-            title="Jadikan Favorit"
+            title="Add to Favorites"
           >
             {isFavorite ? "♥" : "♡"}
           </button>

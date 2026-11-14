@@ -2,20 +2,22 @@ import { useParams, Link } from 'react-router-dom';
 import MovieCard from '../components/MovieCard';
 
 export default function GenrePage({ movies, favorites, setFavorites, watchlist, setWatchlist }) {
-  // useParams menangkap parameter dinamis dari URL (bagian :genreName)
+  // useParams captures the dynamic parameter from the URL (:genreName)
   const { genreName } = useParams();
   
-  // Menyaring data film murni berdasarkan genre yang ada di URL
+  // Filter movies matching the genre
   const genreMovies = movies.filter(movie => movie.genre.includes(genreName));
+  
   return (
-    <div style={{ padding: '0 20px', color: 'white' }}>
+    <div style={{ padding: '16px', color: 'white' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
         <Link to="/" style={{ color: '#aaa', textDecoration: 'none', fontSize: '1.2rem' }}>←</Link>
-        <h2 style={{ margin: 0, marginTop:'10px'}}>Jelajah Genre: <span style={{ color: '#007bff' }}>{genreName}</span></h2>
+        <h2 style={{ margin: 0, marginTop: '10px' }}>
+          Explore Genre: <span style={{ color: '#007bff' }}>{genreName}</span>
+        </h2>
       </div>
 
-      {/* Menggunakan flexWrap agar kartu turun ke baris baru jika layarnya penuh (Sistem Grid) */}
-      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginBottom:'30px'}}>
+      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '30px' }}>
         {genreMovies.length > 0 ? (
           genreMovies.map((movie) => (
             <MovieCard 
@@ -26,12 +28,13 @@ export default function GenrePage({ movies, favorites, setFavorites, watchlist, 
             />
           ))
         ) : (
-          <p style={{ color: '#aaa' }}>Belum ada film untuk genre ini.</p>
+          <p style={{ color: '#aaa' }}>No movies found for this genre yet.</p>
         )}
       </div>
-      <div >
-        <Link className= 'tombol-kembali' to="/" >
-          ← Kembali ke Beranda
+
+      <div>
+        <Link className="tombol-kembali" to="/">
+          ← Back to Home
         </Link>
       </div>
     </div>
