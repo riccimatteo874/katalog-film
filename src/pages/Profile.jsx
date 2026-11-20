@@ -84,7 +84,7 @@ export default function Profile({ movies, favorites, setFavorites, watchlist, se
           <h3 style={{ borderBottom: '1px solid #333', paddingBottom: '10px', marginBottom: '20px' }}>
             ♥ Favorite Movies Collection
           </h3>
-          <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'left', marginLeft:'5px'}}>
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'left',marginLeft:'5px' }}>
             {favoriteMovies.length > 0 ? (
               favoriteMovies.map((movie) => (
                 <MovieCard 
