@@ -147,7 +147,7 @@ export default function MovieDetail({
 
           {/* Watch on Netflix Button */}
           <a
-            href={`https://www.netflix.com/search?q=${encodeURIComponent(movie.title)}`}
+            href={``}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-watch-netflix"
