@@ -26,8 +26,8 @@ export default function Home({ movies, favorites, setFavorites, watchlist, setWa
         <h1 style={{ fontSize: '45px' }}>RINX PARKER MOVIE CATALOG</h1>
         <div className="container-nav">
           <Link className="link-nav" to="/">HOME</Link>
-          <Link className="link-nav" to="/profile">PROFILE</Link>
           <Link className="link-nav" to="/edit-catalog">EDIT</Link>
+          <Link className="link-nav" to="/profile">PROFILE</Link>
         </div>
         {/* Search Bar */}
         <div className="search-wrapper">
@@ -61,7 +61,7 @@ export default function Home({ movies, favorites, setFavorites, watchlist, setWa
         </section>
 
         {/* SECTION 2: Main Catalog (All Movies) */}
-        <section style={{ marginBottom: '40px'}}>
+        <section style={{ marginBottom: '40px', marginLeft:'5px'}}>
           <h2 style={{ fontSize: '40px' }}>Movie List</h2>
           {/* Search result notification */}
           {searchQuery && (
@@ -77,7 +77,7 @@ export default function Home({ movies, favorites, setFavorites, watchlist, setWa
             display: 'flex', 
             gap: '16px', 
             flexWrap: 'wrap', 
-            justifyContent: 'center',
+            justifyContent:'left',
             paddingBottom: '15px',
             padding: '10px',
           }}>

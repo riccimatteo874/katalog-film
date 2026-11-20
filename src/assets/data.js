@@ -7,7 +7,7 @@ export const moviesData = [
     releaseDate: "July 3, 2012",
     duration: "2h 16m",
     producer: "Avi Arad, Matt Tolmach, Laura Ziskin",
-    rating: "7.0 / 10",
+    rating: "10 / 10",
     synopsis:
       "Peter Parker is an outcast high schooler abandoned by his parents as a child. When he uncovers a mysterious briefcase belonging to his father, his quest to understand their disappearance leads him straight to Oscorp and the lab of Dr. Curt Connors.",
   },
@@ -19,7 +19,7 @@ export const moviesData = [
     releaseDate: "May 2, 2014",
     duration: "2h 22m",
     producer: "Avi Arad, Matt Tolmach",
-    rating: "6.6 / 10",
+    rating: "10 / 10",
     synopsis:
       "Peter Parker loves being Spider-Man, but heroism comes at a price. When New York is besieged by Oscorp and a powerful new villain named Electro emerges, Peter must confront his greatest challenge yet while protecting Gwen Stacy.",
   },

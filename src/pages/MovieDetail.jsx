@@ -145,6 +145,18 @@ export default function MovieDetail({
             <div className="movie-detail-rating-badge">⭐ {rating}</div>
           </div>
 
+          {/* Watch on Netflix Button */}
+          <a
+            href={`https://www.netflix.com/search?q=${encodeURIComponent(movie.title)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-watch-netflix"
+            title={`Watch ${movie.title} on Netflix`}
+          >
+            <span style={{ fontSize: "1.1rem" }}>▶</span>
+            <span>Watch</span>
+          </a>
+
           {/* Favorite & Watchlist Buttons */}
           <div className="movie-detail-actions">
             <button
@@ -196,35 +208,35 @@ export default function MovieDetail({
           {/* Metadata Grid */}
           <div className="movie-detail-meta-grid">
             <div className="movie-meta-item">
-              <span className="movie-meta-label">📅 Release Date</span>
+              <span className="movie-meta-label">Release Date</span>
               <span className="movie-meta-value">{releaseDate}</span>
             </div>
 
             <div className="movie-meta-item">
-              <span className="movie-meta-label">⏱️ Duration</span>
+              <span className="movie-meta-label">Duration</span>
               <span className="movie-meta-value">{duration}</span>
             </div>
 
             <div className="movie-meta-item">
-              <span className="movie-meta-label">🎬 Producer</span>
+              <span className="movie-meta-label">Producer</span>
               <span className="movie-meta-value">{producer}</span>
             </div>
 
             <div className="movie-meta-item">
-              <span className="movie-meta-label">⭐ User Rating</span>
+              <span className="movie-meta-label">User Rating</span>
               <span className="movie-meta-value">{rating}</span>
             </div>
           </div>
 
           {/* Synopsis Section */}
           <div className="movie-detail-synopsis-section">
-            <h3 className="section-title">📖 Synopsis</h3>
+            <h3 className="section-title">Synopsis</h3>
             <p className="movie-detail-synopsis-text">{synopsis}</p>
           </div>
 
           {/* Emoji Reaction Section */}
           <div className="movie-detail-emoji-section">
-            <h3 className="section-title">✨ How Did You Feel About This Movie?</h3>
+            <h3 className="section-title">How Did You Feel About This Movie?</h3>
             <p className="emoji-subtitle">
               Select an emoji below to express your reaction or impression!
             </p>

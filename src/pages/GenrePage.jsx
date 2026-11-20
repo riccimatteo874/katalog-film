@@ -11,13 +11,13 @@ export default function GenrePage({ movies, favorites, setFavorites, watchlist, 
   return (
     <div style={{ padding: '16px', color: 'white' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
-        <Link to="/" style={{ color: '#aaa', textDecoration: 'none', fontSize: '1.2rem' }}>←</Link>
+        <Link to="/" style={{ color: '#aaa', textDecoration: 'none', fontSize: '1.2rem', border:'1px solid white', borderRadius: '4px', width:'20px', textAlign:'center',padding:'2px'}}>←</Link>
         <h2 style={{ margin: 0, marginTop: '10px' }}>
           Explore Genre: <span style={{ color: '#007bff' }}>{genreName}</span>
         </h2>
       </div>
 
-      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '30px' }}>
+      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'left', marginBottom: '30px',marginLeft:'5px' }}>
         {genreMovies.length > 0 ? (
           genreMovies.map((movie) => (
             <MovieCard 

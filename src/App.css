@@ -40,7 +40,7 @@ nav h1 {
   background-color: #1a1a24;
   border-radius: 12px;
   overflow: hidden;
-  width: 180px;
+  width: 12.5vw ;
   flex-shrink: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -356,6 +356,38 @@ button {
   width: 100%;
 }
 
+/* Tombol Nonton di Netflix */
+.btn-watch-netflix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 18px;
+  background: #e50914;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(229, 9, 20, 0.4);
+}
+
+.btn-watch-netflix:hover {
+  background: #b80710;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 9, 20, 0.6);
+  color: #ffffff;
+}
+
+.btn-watch-netflix:active {
+  transform: translateY(0);
+}
+
 .movie-detail-info-col {
   flex: 1;
   display: flex;
@@ -418,7 +450,7 @@ button {
 .section-title {
   font-size: 1.25rem;
   margin: 0 0 10px 0;
-  color: #c084fc;
+  color: #3e3bfc;
   font-weight: 700;
 }
 
@@ -431,10 +463,10 @@ button {
 
 /* ===== FITUR PILIHAN EMOJI ===== */
 .movie-detail-emoji-section {
-  background: linear-gradient(145deg, rgba(30, 27, 45, 0.8), rgba(20, 20, 30, 0.95));
+  background: linear-gradient(145deg, rgba(16, 19, 33, 0.8), rgba(20, 20, 30, 0.95));
   padding: 24px;
   border-radius: 16px;
-  border: 1px solid rgba(168, 85, 247, 0.25);
+  border: 1px solid rgba(85, 93, 247, 0.25);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
@@ -469,14 +501,14 @@ button {
 
 .emoji-button:hover {
   transform: translateY(-4px) scale(1.05);
-  background: rgba(168, 85, 247, 0.2);
-  border-color: #a855f7;
+  background: rgba(55, 37, 249, 0.2);
+  border-color: #42d9ff;
 }
 
 .emoji-button.active-emoji {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.45), rgba(59, 130, 246, 0.45));
-  border-color: #c084fc;
-  box-shadow: 0 0 16px rgba(192, 132, 252, 0.5);
+  background: linear-gradient(135deg, rgba(60, 42, 250, 0.45), rgba(59, 130, 246, 0.45));
+  border-color: #4cc8f5;
+  box-shadow: 0 0 16px rgba(0, 25, 253, 0.5);
   transform: translateY(-3px) scale(1.05);
 }
 
@@ -495,8 +527,8 @@ button {
 .selected-emoji-banner {
   margin-top: 18px;
   padding: 12px 18px;
-  background: rgba(168, 85, 247, 0.15);
-  border: 1px solid rgba(168, 85, 247, 0.4);
+  background: rgba(2, 0, 121, 0.15);
+  border: 1px solid rgba(24, 229, 244, 0.4);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -693,4 +725,17 @@ button {
     gap: 8px;
     text-align: center;
   }
+}
+.editProfile-button{
+  padding: 8px 16px; 
+  background: #3b82f6;
+  color: white; 
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-weight: bold;
+}
+.editProfile-button:hover{
+  background-color: red;
+  transition: all ease 0.5s;
 }

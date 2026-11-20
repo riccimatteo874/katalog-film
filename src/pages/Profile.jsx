@@ -21,11 +21,11 @@ export default function Profile({ movies, favorites, setFavorites, watchlist, se
         <h1 style={{ fontSize: '45px' }}>RINX PARKER MOVIE CATALOG</h1>
         <div className="container-nav">
           <Link className="link-nav" to="/">HOME</Link>
-          <Link className="link-nav" to="/profile">PROFILE</Link>
           <Link className="link-nav" to="/edit-catalog">EDIT</Link>
+          <Link className="link-nav" to="/profile">PROFILE</Link>
         </div>
       </nav>
-      <div style={{ padding: '0 20px', color: 'white', maxWidth: '1000px', margin: '0 auto' }}>
+      <div style={{ padding: '0 20px', color: 'white', maxWidth: '80vw', margin: '0 auto' }}>
         {/* USER PROFILE CARD */}
         <section style={{ 
           background: '#1a1a24', padding: '30px', borderRadius: '12px', 
@@ -60,18 +60,17 @@ export default function Profile({ movies, favorites, setFavorites, watchlist, se
             </form>
           ) : (
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',flexDirection:'column' }}>
                 <div>
-                  <h2 style={{ fontSize: '2rem', margin: '0 0 10px 0' }}>
+                  <h2 style={{ fontSize: '2rem', margin: '0 0 10px 0', textAlign:'center' }}>
                     <span style={{ color: '#007bff' }}>{userProfile.name}</span>
                   </h2>
-                  <p style={{ color: '#aaa', fontSize: '1.1rem', margin: '0 0 20px 0' }}>
+                  <p style={{ color: '#aaa', fontSize: '1.1rem', margin: '0 0 20px 0',textAlign:'center' }}>
                     {userProfile.bio}
                   </p>
                 </div>
-                <button 
+                <button className='editProfile-button'
                   onClick={() => setIsEditing(true)}
-                  style={{ padding: '8px 16px', background: '#3b82f6', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', fontWeight: 'bold' }}
                 >
                   ✏️ Edit Profile
                 </button>
@@ -85,7 +84,7 @@ export default function Profile({ movies, favorites, setFavorites, watchlist, se
           <h3 style={{ borderBottom: '1px solid #333', paddingBottom: '10px', marginBottom: '20px' }}>
             ♥ Favorite Movies Collection
           </h3>
-          <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'left', marginLeft:'5px'}}>
             {favoriteMovies.length > 0 ? (
               favoriteMovies.map((movie) => (
                 <MovieCard 

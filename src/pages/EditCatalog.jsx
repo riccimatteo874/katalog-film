@@ -67,8 +67,8 @@ export default function EditCatalog({ movies, setMovies }) {
         <h1 style={{ fontSize: '45px' }}>RINX PARKER MOVIE CATALOG</h1>
         <div className="container-nav">
           <Link className="link-nav" to="/">HOME</Link>
-          <Link className="link-nav" to="/profile">PROFILE</Link>
           <Link className="link-nav" to="/edit-catalog">EDIT</Link>
+          <Link className="link-nav" to="/profile">PROFILE</Link>
         </div>
       </nav>
 
